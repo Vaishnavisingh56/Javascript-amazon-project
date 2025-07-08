@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ShopSphere</title>
+
+    <!-- Responsive Design Meta Tag -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Load Poppins Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <!-- Updated CSS files for aesthetics -->
+    <link rel="stylesheet" href="styles/shared/general.css">
+    <link rel="stylesheet" href="styles/shared/shopsphere-header.css">
+    <link rel="stylesheet" href="styles/pages/shopsphere.css">
+
+    <style>
+      body {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f8fb;
+      }
+
+      .shopsphere-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        background-color: #4a90e2;
+        color: white;
+      }
+
+      .shopsphere-header a.header-link {
+        text-decoration: none;
+        color: white;
+      }
+
+      .shopsphere-header .shopsphere-logo {
+        height: 40px;
+      }
+
+      .shopsphere-header .search-bar {
+        width: 50%;
+        padding: 8px;
+        border: none;
+        border-radius: 20px;
+        outline: none;
+        font-size: 16px;
+      }
+
+      .shopsphere-header .search-button {
+        background-color: #357ABD;
+        border: none;
+        border-radius: 50%;
+        padding: 8px;
+        cursor: pointer;
+      }
+
+      .shopsphere-header .search-button img {
+        height: 16px;
+      }
+
+      .shopsphere-header .cart-icon {
+        height: 24px;
+      }
+
+      .main {
+        padding: 20px;
+      }
+
+      .products-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      .cart-quantity {
+        background-color: #ff6f61;
+        color: white;
+        border-radius: 50%;
+        padding: 5px 10px;
+        font-size: 12px;
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="shopsphere-header">
+      <div class="shopsphere-header-left-section">
+        <a href="shopsphere.html" class="header-link">
+          <img class="shopsphere-logo" src="images/shopsphere-logo.png" alt="ShopSphere Logo">
+        </a>
+      </div>
+
+      <div class="shopsphere-header-middle-section">
+        <input class="search-bar" type="text" placeholder="Search for products">
+
+        <button class="search-button">
+          <img class="search-icon" src="images/icons/search-icon-white.png" alt="Search">
+        </button>
+      </div>
+
+      <div class="shopsphere-header-right-section">
+        <a class="orders-link header-link" href="orders.html">
+          <span class="returns-text">Returns</span>
+          <span class="orders-text">& Orders</span>
+        </a>
+
+        <a class="cart-link header-link" href="checkout.html">
+          <img class="cart-icon" src="images/icons/cart-icon-white.png" alt="Cart">
+          <div class="cart-quantity js-cart-quantity">0</div>
+          <div class="cart-text">Cart</div>
+        </a>
+      </div>
+    </div>
+    
+    <div class="main">
+      <div class="products-grid js-products-grid">
+        <!-- Dynamic products will load here -->
+      </div>
+    </div>
+    
+    <script type="module" src="scripts/shopsphere.js">
+    </script>
+  </body>
+</html>
